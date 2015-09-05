@@ -1,89 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- added meta tag -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Pui Yee Choi's Resume as of 03-SEP-2015">
+	<meta name="author" content="Pui Yee Choi">
 
-	<title>Pui Yee Choi | Prime Academy Applicant</title>
+	<title>Pui Yee Choi | Prime Digital Academy</title>
 
 	<!-- Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500|Bangers|Oswald|Pacifico' rel='stylesheet' type='text/css'>
-	<link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500|Bangers|Oswald|Pacifico' rel='stylesheet'>  <!--removed "type='text/css'" -->
+	<link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!--removed "type='text/css'" -->
 		
 	<!-- Styles -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-	
 	<link rel="stylesheet" href="style/main.css">
 
 </head>
 
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-  					<span class="sr-only">Toggle navigation</span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
-  				<a class="navbar-brand" href="#about"><span class="name">Pui Yee Choi</span></a>
-  			</div>
-  		
-			<div class="collapse navbar-collapse navbar-right">
-  				<ul class="nav navbar-nav">
-  					<li class="active"><a href="#about">About Pui</a></li>
-  					<li><a href="#education">Education</a></li>
-  					<li><a href="#professional">Professional Experience</a></li>
-					<li><a href="#volunteer">Volunteering Experience</a></li>
-					
-  				</ul>
-  			</div>
-		</div> 
+	<nav class="main-nav">
+		<ul class="navbar-name"> <!-- removed div and Bootstrap div's-->
+  			<li><a href="#about">Pui Yee Choi</a></li>
+  		</ul>
+  			
+  		<ul class="navbar-right">
+  			<li><a href="#about">About Pui</a></li>
+  			<li><a href="#education">Education</a></li>
+  			<li><a href="#professional">Professional Experience</a></li>
+			<li><a href="#volunteer">Volunteering Experience</a></li>	
+  		</ul> 
   	</nav>
 	
 	<section id="about">
 		<div class="container">
 			<h1 class="name">Pui Yee Choi</h1>
-			<p class="contact">8345 Ewing Road, Bloomington, MN 55431 | 952-270-3537 | choipui@gmail.com</p>
+			<p class="contact">8345 Ewing Road, Bloomington, MN 55431 | 952-270-3537 | choipui@gmail.com <a href="mailto:choipui@gmail.com"><i class="fa fa-envelope"></i></a></p>
 			<img class="profile-pic" src="profile-pic.jpg" alt="Pui Yee Choi profile picture"/>
-			<h3 class="objective">Self-motivated and professional individual aiming to gain software development skills and industrial network through the Prime Digital Academy program.  My goal after this program is to become a web developer.</h3>
-		</div> 
+			<h2 class="objective">Self-motivated and professional individual aiming to gain software development skills and industrial network through the Prime Digital Academy program.  My goal after this program is to become a web developer.</h2> <!-- changed from h3 to h2 -->
+		</div>	
 	</section> 
 
 
 	<section id="education">
-		<div class="container">
-			<p class="name">Education</p>
-			<div class="row">
-				<div class="col-md-6 bachelor">
-  					<h3>Bachelor of Biomedical Engineering</h3>
+		<!-- delete container div -->  <!-- removed Bootstrap grids -->
+		
+		<h1 class="education_title"><i class="fa fa-graduation-cap"></i><br>Education</h1>  <!-- change from p to h1 to establish hierarchy -->
+		
+				<div class="bachelor">
+  					<h2>Bachelor of Biomedical Engineering</h2> <!-- changed from h3 to h2 -->
   					<p>University of Minnesota - Twin Cities</p>
   					<p>Minor in Chemistry</p>
   					<p>GPA: 3.92/4.00</p>
   				</div>
 
-  				<div class="col-md-6 master">
-  					<h3>Master of Science</h3>
+  				<div class="master">
+  					<h2>Master of Science</h2> <!-- changed from h3 to h2 -->
   					<p>University of Minnesota - Twin Cities</p>
   					<p>Molecular, Cellular, Development Biology and Genetics</p>
-  					<p>Thesis Project: Roles of Heparan Sulfate Proteoglycans in Drosophila ovarian follicle stem cells</p>	
   					<p>GPA: 3.81/4.00</p>
   				</div>
-  				
-  			</div>
-		</div>	
 	</section> 
 
 	<section id="professional">
-		<p class="name">Professional Experience</p>
-			<div class="container">
-				<h3>American Medical Systems</h3>
-				<p class="job-title">Quality Engineer</p>
-				<p class="job-dates">May 2014 - Current</p>
+		<div class="container">
+		<h1 class="professional_title"><i class="fa fa-briefcase"></i><br>Professional Experience</h1>
+		  <!-- change from p to h1 to establish hierarchy -->
+			<!-- delete container div -->
+				<h2>American Medical Systems</h2> <!-- changed from h3 to h2 for all employers -->
+				<h3 class="job-title">Quality Engineer</h3>  <!-- changed from p to h3 for all .job-title -->
+				<h3 class="job-dates">May 2014 - Current</h3>  <!-- changed from p to h3 for all .job-dates -->
 				
 				<ul class="job-description">
 					<li>Represent Quality Engineering in cross-functional team in product development projects, post-market non-conformance investigation, and field actions/recalls</li> 
@@ -91,9 +77,9 @@
 				</ul>
   			
 
-				<h3>University of Minnesota</h3>
-				<p class="job-title">Graduate Research Assistant</p>
-				<p class="job-dates">September 2011 - June 2014</p>
+				<h2>University of Minnesota</h2>
+				<h3 class="job-title">Graduate Research Assistant</h3>
+				<h3 class="job-dates">September 2011 - June 2014</h3>
 				
 				<ul class="job-description">
 					<li>Investigation of the roles of heparan sulfate proteoglycans in Drosophila epithelial stem cell maintenance and replacement</li> 
@@ -103,9 +89,9 @@
 					<li>Present research results at annual scientific seminars and meetings</li>
 				</ul>
 
-				<h3>Zimmer Spine</h3>
-				<p class="job-title">Quality Engineer</p>
-				<p class="job-dates">June 2010 - October 2010</p>
+				<h2>Zimmer Spine</h2>
+				<h3 class="job-title">Quality Engineer</h3>
+				<h3 class="job-dates">June 2010 - October 2010</h3>
 				
 				<ul class="job-description">
 					<li>Investigated product and process nonconformance, developed and implemented corrective/preventative action (CAPA) plans</li> 
@@ -113,9 +99,9 @@
 					<li>Supported procedures, specifications, and standards for products and processes in compliance to FDA and international regulations and standards</li>
 				</ul>
 
-				<h3>Zimmer Spine</h3>
-				<p class="job-title">Rotational Engineer</p>
-				<p class="job-dates">June 2008 - June 2010</p>
+				<h2>Zimmer Spine</h2>
+				<h3 class="job-title">Rotational Engineer</h3>
+				<h3 class="job-dates">June 2008 - June 2010</h3>
 				
 				<ul class="job-description">
 					<li>Developed technical, management and leadership skills in the R&amp;D, Quality Assurance and Manufacturing functions</li>
@@ -139,12 +125,12 @@
 						</ul>
 				</ul>
 
-				<h3>St. Jude Medical</h3>
-				<p class="job-title">Design Assurance Engineer Intern</p>
-				<p class="job-dates">June 2007 - June 2008</p>
+				<h2>St. Jude Medical</h2>
+				<h3 class="job-title">Design Assurance Engineer Intern</h3>
+				<h3 class="job-dates">June 2007 - June 2008</h3>
 				
 				<ul class="job-description">
-					<li>Performed design assurance activities to support the release of the Angio-Seal™ Evolution device</li> 
+					<li>Performed design assurance activities to support the release of the Angio-Seal&trade; Evolution device</li> 
 						<ul>
 							<li>Performed inspection of pre-production components and data analysis</li>
 							<li>Developed inspection procedures for the device components</li>
@@ -152,32 +138,32 @@
 							<li>Gathered biocompatibility data and developed report for device components</li>
 						</ul>	
 				</ul>
-			</div>	
+		</div>
 	</section> 
 
 	<section id="volunteer">
 		<div class="container">
-			<p class="name">Volunteering Experience</p>
+			<h1 class="volunteer_title"><i class="fa fa-heart"></i><br>Volunteering Experience</h1>
 
-			<h3>VEAP, Bloomington, MN</h3>
-				<p class="job-title">Pantry Stocker</p>
-				<p class="job-dates">March 2011 - September 2011</p>
+			<h2>VEAP, Bloomington, MN</h2>
+				<h3 class="job-title">Pantry Stocker</h3>
+				<h3 class="job-dates">March 2011 - September 2011</h3>
 				
 				<ul class="job-description">
 						
 				</ul>
 				
-			<h3>Lighthouse Youth Program, Union Gospel Mission, St. Paul, MN</h3>
-				<p class="job-title">Tutor for Grade 7-12 students</p>
-				<p class="job-dates">October 2010 - September 2011</p>
+			<h2>Lighthouse Youth Program, Union Gospel Mission, St. Paul, MN</h2>
+				<h3 class="job-title">Tutor for Grade 7-12 students</h3>
+				<h3 class="job-dates">October 2010 - September 2011</h3>
 				
 				<ul class="job-description">
 						
 				</ul>
 				  			
-  			<h3>Math &amp; Science Family Fun Fair, University of Minnesota, Minneapolis, MN</h3>
-				<p class="job-title">Drosophila developmental biology and genetics exhibit volunteer</p>
-				<p class="job-dates">November 2013</p>
+  			<h2>Math &amp; Science Family Fun Fair, University of Minnesota, Minneapolis, MN</h2>
+				<h3 class="job-title">Drosophila developmental biology and genetics exhibit volunteer</h3>
+				<h3 class="job-dates">November 2013</h3>
 
 				<ul class="job-description">
 						
@@ -186,15 +172,11 @@
 		</div>	
 	</section> 
 	
-	<div class="arrow-top">
-		<a href="#about"><i class="fa fa-arrow-circle-up fa-lg"></i><span>  Back to Top</span></a>
-	</div>
-
-
-		<!-- JavaScript -->
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  		<script src="js/script.js" type="text/javascript"></script>	
+<footer>
+	<!-- replaced div with footer --> 
+		<a href="#about"><i class="fa fa-arrow-circle-up fa-lg"></i><span>  Back to Top</span></a><br>
+			
+</footer>
 
 </body>
 </html>

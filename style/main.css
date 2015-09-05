@@ -2,67 +2,85 @@
 /* General */
 /* ====================== */
 
+/* clear out browser's default settings */
+html, body, h1, h2, h3, h4, p, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+
 body {
 	font-family: 'Raleway', Helvetica, Arial, sans-serif;
 	color: #888;
-	position: relative;
 }
 
 h1,h2,h3,h4,h5 {font-weight: 200;}
 a:focus {outline: none;}
-a:hover {text-decoration: none}
+a, a:hover {text-decoration: none}
 p {	line-height: 2;}
-.name {
-	font-weight: 500;
+
+
+.container {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* ====================== */
 /* Navigation Bar*/
 /* ====================== */
-.navbar {
-	min-height: 60px;
-	padding: 9px 20px 9px 10px;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	background-color: rgba(255,255,255,0.9);
-	font-size: 18px;
-}
-.navbar-default .navbar-nav > .active > a {
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #999;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-	color: #222;
-	background-color: transparent;
+
+nav {
 	
+	padding: 8px 20px 8px 10px;
+	background-color: rgba(255,255,255,1);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 0px 5px #888888;
 }
 
-.navbar-default .navbar-nav > li > a {
-	color: #999;
-	text-shadow: none;
+.navbar-name {
+	float: left;
+	padding-left: 20px;
 }
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  border-radius: 0;
-}
-.nav-open.navbar {top:0;}
 
-.navbar-brand .name {
+.navbar-name li {
+	display: inline;
+}
+
+.navbar-name a {
 	font-weight: 500;
 	font-size: 40px; 
 	color: #444; 
 	font-family: 'Bangers', cursive;
-
+	text-decoration: none;
 }
 
-.navbar-default .navbar-collapse {
-    border-color: #999;
+.navbar-right {
+	float: right;
+	padding-top: 15px;
+	padding-right: 20px;
+}
+
+.navbar-right li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.navbar-right a {
+	text-decoration: none;
+	font-size: 16px; 
+	color: #444;
+	transition: all 0.1s ease-in;
+	padding: 5px 15px;
+}
+
+.navbar-right a:hover {
+	color: #fff;
+	background-color: #777;
+	border-radius: 3px;
 }
 
 /* ====================== */
@@ -78,25 +96,34 @@ p {	line-height: 2;}
 #about .name {
 	font-family: 'Bangers', cursive;
 	font-size: 60px;
-	padding-top: 20px;
+	padding-top: 40px;
 	margin-bottom: 0px;
 }
 
-#about .contact {
+#about .contact, .contact a {
 	font-size: 15px;
 	letter-spacing: 3px;
+	color: #EDEDED;
 }
 
-#about .objective {
-	margin: 0 auto; 
-	width: 60%;
-	padding: 40px 0 90px;
+.contact a:hover {
+	display: inline-block;
+	-ms-transform: skewX(-15deg); /* IE 9 */
+    -webkit-transform: skewX(-15deg); /* Safari */
+    transform: skewX(-15deg); 
+}
+
+.objective {
+	padding: 40px 50px 90px 50px;
 	line-height: 1.3;
 	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
 }
 
 .profile-pic {
-	padding-top: 20px;
+	margin-top: 40px;
+	border: 0px solid #fff;
+	border-radius: 50%;
 }
 
 /* ====================== */
@@ -105,25 +132,39 @@ p {	line-height: 2;}
 #education {
 	background-color: #fff;
 	color: #222;
-	padding-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 90px;
+	text-align: center;
 }
 
-.master {text-align: center;}
-.bachelor {text-align: center;}
+.master {
+	text-align: center;
+	display: inline-block;
+	padding-left: 50px;
+}
 
-#education .name {
+.bachelor {
+	text-align: center;
+	display: inline-block;
+	padding-right: 50px;
+}
+
+.education_title {
 	font-size: 50px;
-	padding-top: 60px;
+	padding-top: 50px;
+	padding-bottom: 60px;
 	text-align: center;
 	font-family: 'Pacifico', cursive;
+	line-height: 50px;
 }
 
-#education h3 {
-	
+#education h2 {
+	font-size: 22px;
 	padding-bottom: 10px;
 	text-decoration: underline;
 }
-#education p {font-size: 18px;}
+
+
 
 /* =================================== */
 /* Professional Experience Section */
@@ -131,34 +172,47 @@ p {	line-height: 2;}
 
 #professional {
 	background-color: #222;
-	padding-bottom: 60px;
+	padding: 60px 50px 60px 50px;
 	color: #EDEDED;	
-	
 }
 
-#professional .name {
+.professional_title {
 	font-size: 50px;
-	padding-top: 60px;
+	padding-top: 40px;
+	padding-bottom: 50px;
 	text-align: center;
 	font-family: 'Pacifico', cursive;
+	line-height: 60px;
+}
+
+#professional h2 {
+	font-size: 22px;
+	padding-bottom: 5px;
+}
+
+#professional h3 {
+	font-size: 18px;
+	font-weight: 400;
+	padding-bottom: 8px;
 }
 
 .job-title {
 	float: left;
-	font-size: 18px;
 }
 
 .job-dates {
 	display: inline;
 	float: right;
-	font-size: 18px;
-	
 }
 
 .job-description {
 	clear: both;
 	font-size: 16px;
 	padding-bottom: 30px;
+}
+
+.job-description li {
+	padding-bottom: 5px;
 }
 
 /* =================================== */
@@ -168,41 +222,43 @@ p {	line-height: 2;}
 #volunteer {
 	background-color: #fff;
 	padding-bottom: 40px;
+	padding-top: 40px;
 	color: #222;
 }
 
-#volunteer .name {
+.volunteer_title {
 	font-size: 50px;
-	padding-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 	text-align: center;
 	font-family: 'Pacifico', cursive;
+	line-height: 60px;
 }
 
+#volunteer h3 {
+	font-size: 18px;
+	font-weight: 400;
+	padding-bottom: 8px;
+}
+
+
 /* =================================== */
-/* Back to Top */
+/* footer */
 /* =================================== */
 
-.arrow-top {
+footer {
+	background-color: #222;
+	padding-top: 40px;
 	text-align: center;
 	padding-bottom: 50px;
 	font-size: 16px;
 }
 
-.arrow-top a {
-	color: #888;
+footer a {
+	color: #999;
+	text-decoration: none;
 }
 
-.arrow-top a:hover {
-	color: #222;
+footer a:hover {
+	color: #fff;
 }
-
-/* =================================== */
-/* Media Inquiry */
-/* =================================== */
-
-@media (min-width: 1200px) {
-    #professional .container, #volunteer .container {
-        max-width: 970px;
-    }
-}
-
